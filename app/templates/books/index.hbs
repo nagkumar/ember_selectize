@@ -1,5 +1,5 @@
 <div id="myOverFlow">
-  {{ember-selectize
+  {{ember-selectize (action 'abc' on='click')
   content=sampleDataOptional
   optionValuePath="content.id"
   optionLabelPath="content.title"
@@ -35,4 +35,15 @@
   optionLabelPath="content.title"
   selection=model.item
   placeholder="Select an item 4" }}
+
+    <div class="btn-group">
+        <button type="button" {{action 'abc'}} class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
 </div>

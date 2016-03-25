@@ -3,19 +3,27 @@ html, body
   margin: 20px;
 }
 
-#container {
+#container
+{
   position: relative;
 }
 
-
-#myOverFlow{
+#myOverFlow
+{
   width: 300px;
   height: 100px;
   background: rosybrown;
   overflow-y: auto;
 }
 
-#raja{
-  height: 300px;
+.selectize-dropdown {
+  position: fixed;
+}
 
+.dropdown-menu{
+  position:fixed;
+}
+
+.button{
+  height:30px;
 }

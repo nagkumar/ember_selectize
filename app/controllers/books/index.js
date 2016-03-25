@@ -1,6 +1,14 @@
 import Ember from 'ember';
 import groupBy from 'ember-group-by';
 
+export function dropDownFixPosition(button, dropdown)
+{
+  console.log(button, dropdown);
+  var dropDownTop = button.offset().top + button.outerHeight();
+  dropdown.css('top', dropDownTop + "px");
+  dropdown.css('left', button.offset().left + "px");
+}
+
 export default Ember.Controller.extend(
   {
     booksByType: groupBy('model', 'type'),
@@ -50,5 +58,12 @@ export default Ember.Controller.extend(
         category: 'Another category',
         title: 'This title will appear on select 3'
       }
-    ]
+    ],
+
+    actions: {
+      abc: function ()
+      {
+        dropDownFixPosition(Ember.$('button'), Ember.$('.dropdown-menu'));
+      }
+    }
   });
