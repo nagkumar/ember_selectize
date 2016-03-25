@@ -1,30 +1,38 @@
-<form class="form" role="form">
-    <div class="form-group">
-        <label>Hours, Minutes with Input</label>
-      {{#bs-datetimepicker date=time4  format='hh:mm a'}}
-        {{input disabled=disabled class="form-control" name="Date" placeholder="Date"}}
-      {{/bs-datetimepicker}}
-    </div>
+<div id="myOverFlow">
+  {{ember-selectize
+  content=sampleDataOptional
+  optionValuePath="content.id"
+  optionLabelPath="content.title"
+  selection=model.item
+  placeholder="Select an item 1" }}
 
-    <div class="form-group">
-        <label>Hours, Minutes and AM/PM</label>
-      {{bs-datetimepicker date=time4  format='hh:mm a' updateDate=(action (mut time4))}}
-    </div>
+    <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
 
-    <div class="form-group">
-        <label>Hours, Minutes and 24 Hours Format</label>
-      {{bs-datetimepicker date=time4  format='HH:mm'}}
-    </div>
-</form>
+  {{ember-selectize
+  content=sampleDataOptional
+  optionValuePath="content.id"
+  optionLabelPath="content.title"
+  selection=model.item
+  placeholder="Select an item 2" }}
 
-{{bs-datetimepicker date=time4  format='HH:mm' placeholder="Click to play" class="form-control"}}
 
-<div id="container">
-    <label>Hours, Minutes and 24 Hours Format, No Icon</label>
-  {{bs-datetimepicker date=time4 format='HH:mm' noIcon=true}}
+  {{ember-selectize
+  content=sampleDataOptional
+  optionValuePath="content.id"
+  optionLabelPath="content.title"
+  selection=model.item
+  placeholder="Select an item 3" }}
+
+
+  {{ember-selectize
+  content=sampleDataOptional
+  optionValuePath="content.id"
+  optionLabelPath="content.title"
+  selection=model.item
+  placeholder="Select an item 4" }}
 </div>
-
-<br/>
-Modified Date: {{time4}}
-
-Use : ember install ember-bootstrap-datetimepicker
